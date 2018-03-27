@@ -1,8 +1,7 @@
-var z = db.air_routes.aggregate([
+db.air_routes.aggregate([
     {
-        $match: {
-            $or: [{ airplane: /380/ }, { airplane: /747/ }]
-        }
+        $match: { 'airplane' : { $in : [/380/, /747/]}}            
+        
     },
     {
         $group: {
