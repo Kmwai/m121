@@ -5,7 +5,7 @@ What is the name, number of movies, and average rating (truncated to one decimal
 Provide the input in the following order and format
 { "_id": "First Last", "numFilms": 1, "average": 1.1 } */
 
-var y = db.movies.aggregate([
+db.movies.aggregate([
     {
         $match: {
             'languages': 'English',
